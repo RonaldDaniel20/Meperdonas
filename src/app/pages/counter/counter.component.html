@@ -1,0 +1,15 @@
+<div class="flex h-screen items-center justify-center">
+    <div class="flex flex-col items-center justify-center gap-3">
+        <h1 class="text-3xl font-bold">Welcome to Angular's Signal Tutorial</h1>
+        <p class="text-6xl text-blue-600">{{ this.count() }}</p>
+        @if(this.isEven()){
+            <p class="text-green-400"> Even</p>
+        }@else{
+            <p class="text-red-500"> Odd</p>
+        }
+        <div class="flex flex-col md:flex-row gap-3">
+            <button (click)="increment()" class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-500 text-white hover:bg-blue-600">+</button>
+            <button (click)="decrement()" class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-500 text-white hover:bg-blue-600">-</button>
+        </div>
+    </div>
+</div>
