@@ -5,11 +5,11 @@ import { Component, signal } from "@angular/core";
 })
 
 export class MePerdonas {
-    yesButtonSize = 18;
+    yesButtonSize = signal(18);
     visible = signal(true);
 
     hacerGrande = () => {
-        this.yesButtonSize += 10;
+        this.yesButtonSize.set(this.yesButtonSize() + 10);
     }
 
     meHazPerdonado = () => {
