@@ -6,6 +6,7 @@ import { Component, signal } from "@angular/core";
 
 export class MePerdonas {
     yesButtonSize = 18;
+    visible = signal(true);
 
     hacerGrande = () => {
         this.yesButtonSize += 10;
@@ -13,6 +14,7 @@ export class MePerdonas {
 
     meHazPerdonado = () => {
         alert('!Gracias por perdoname!');
+        this.visible.set(false);
     }
 
 }
